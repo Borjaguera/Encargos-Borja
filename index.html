@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,7 +7,7 @@
 
 <style>
 
-/* ESTILO GENERAL */
+/* GENERAL */
 
 body{
 font-family:system-ui;
@@ -21,11 +20,7 @@ scroll-behavior:smooth;
 section{
 max-width:1100px;
 margin:auto;
-padding:80px 20px;
-}
-
-h1,h2,h3{
-margin-top:0;
+padding:100px 25px;
 }
 
 /* HEADER */
@@ -39,6 +34,7 @@ background:linear-gradient(120deg,#00c6ff,#0072ff);
 header h1{
 font-size:60px;
 letter-spacing:2px;
+margin-bottom:10px;
 }
 
 header p{
@@ -68,15 +64,35 @@ nav a:hover{
 color:#00e5ff;
 }
 
-/* CARDS */
+/* TITULOS */
+
+h2{
+font-size:34px;
+margin-bottom:25px;
+color:#00e5ff;
+border-left:5px solid #00e5ff;
+padding-left:15px;
+}
+
+h3{
+margin-top:30px;
+color:#7df9ff;
+}
+
+/* CARD */
 
 .card{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
 border-radius:15px;
-padding:30px;
-margin-bottom:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
+padding:40px;
+margin-bottom:50px;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+p{
+line-height:1.7;
+margin-bottom:15px;
 }
 
 /* TECNOLOGIAS */
@@ -84,7 +100,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.3);
 .tech{
 display:flex;
 flex-wrap:wrap;
-gap:15px;
+gap:12px;
 margin-top:20px;
 }
 
@@ -101,28 +117,48 @@ font-weight:bold;
 .proyectos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:30px;
 margin-top:30px;
 }
 
 .proyecto{
-background:rgba(255,255,255,0.1);
-padding:25px;
+background:rgba(255,255,255,0.08);
+padding:30px;
 border-radius:15px;
 transition:0.3s;
 border:1px solid rgba(255,255,255,0.2);
 }
 
 .proyecto:hover{
-transform:translateY(-8px) scale(1.02);
-background:rgba(255,255,255,0.2);
+transform:translateY(-8px) scale(1.03);
+background:rgba(255,255,255,0.15);
 }
 
 .proyecto button{
-margin-top:10px;
+margin-top:15px;
 background:#00e5ff;
 border:none;
 padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* FORMULARIO */
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:none;
+}
+
+button{
+background:#00e5ff;
+color:#111;
+border:none;
+padding:12px 20px;
 border-radius:8px;
 cursor:pointer;
 font-weight:bold;
@@ -149,7 +185,7 @@ margin-top:80px;
 
 <p>
 Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)  
-Apasionado por el desarrollo web, la programación y la creación de proyectos propios.
+Interesado en desarrollo web, programación y proyectos personales.
 </p>
 
 </header>
@@ -157,8 +193,9 @@ Apasionado por el desarrollo web, la programación y la creación de proyectos p
 <nav>
 
 <a href="#sobre">Sobre mí</a>
-<a href="#tecnologia">Tecnologías</a>
+<a href="#tecnologias">Tecnologías</a>
 <a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
 
 </nav>
 
@@ -170,26 +207,25 @@ Apasionado por el desarrollo web, la programación y la creación de proyectos p
 
 <p>
 Hola, soy <b>Borja Agüera</b>, estudiante de Desarrollo de Aplicaciones Multiplataforma.
-Me interesa especialmente el desarrollo de aplicaciones, el desarrollo web y la creación
-de proyectos personales que me permitan seguir aprendiendo y mejorar mis habilidades.
+Me interesa especialmente el desarrollo de aplicaciones, el desarrollo web y la
+creación de proyectos que me permitan seguir aprendiendo.
 </p>
 
 <p>
-Actualmente desarrollo proyectos tanto por estudios como por interés personal.
-Me gusta crear herramientas útiles, páginas web y pequeñas aplicaciones que resuelvan
-problemas reales.
-</p>
-
-<p>
+Actualmente desarrollo proyectos tanto por estudios como por iniciativa personal.
 También estoy abierto a colaborar en pequeños proyectos o ayudar a crear páginas web
-para personas o negocios que necesiten presencia online.
+para personas o negocios.
+</p>
+
+<p>
+Intento crear soluciones claras, funcionales y accesibles adaptadas a cada proyecto.
 </p>
 
 </div>
 
 </section>
 
-<section id="tecnologia">
+<section id="tecnologias">
 
 <div class="card">
 
@@ -197,7 +233,7 @@ para personas o negocios que necesiten presencia online.
 
 <p>
 Trabajo principalmente con tecnologías de desarrollo web y programación,
-además de bases de datos para gestionar información en aplicaciones.
+además de bases de datos para gestionar información dentro de aplicaciones.
 </p>
 
 <div class="tech">
@@ -213,29 +249,27 @@ además de bases de datos para gestionar información en aplicaciones.
 <h3>Desarrollo Web</h3>
 
 <p>
-Utilizo <b>HTML</b> para estructurar páginas web, creando contenidos claros y bien organizados.
-Con <b>CSS</b> diseño interfaces visuales modernas, adaptadas a diferentes dispositivos
-y centradas en la experiencia del usuario.
+Utilizo HTML para estructurar páginas web y CSS para diseñar interfaces modernas,
+adaptadas a diferentes dispositivos.
 </p>
 
 <p>
-También utilizo <b>JavaScript</b> para añadir interacción a las páginas web,
-crear formularios dinámicos y mejorar la funcionalidad de las aplicaciones web.
+Con JavaScript añado interacción a las páginas web y funcionalidades dinámicas.
 </p>
 
 <h3>Programación</h3>
 
 <p>
-Trabajo con <b>Java</b> para desarrollar aplicaciones, practicar programación orientada a objetos
-y crear lógica de negocio dentro de los proyectos.
+Trabajo con Java para desarrollar aplicaciones y practicar programación
+orientada a objetos.
 </p>
 
 <h3>Bases de datos</h3>
 
 <p>
-Utilizo <b>SQL</b> para trabajar con bases de datos, almacenar información y gestionar datos
-dentro de aplicaciones. También puedo conectar aplicaciones o páginas web con bases de datos
-para crear sistemas más completos.
+Utilizo SQL para trabajar con bases de datos, almacenar información y gestionar
+datos dentro de aplicaciones. También puedo conectar aplicaciones o páginas web
+con bases de datos para crear sistemas más completos.
 </p>
 
 </div>
@@ -250,11 +284,26 @@ para crear sistemas más completos.
 
 <div class="proyecto">
 
-<h3>Web de Bali</h3>
+<h3>Web sobre Bali</h3>
 
 <p>
-Página web informativa sobre Bali donde presento información sobre lugares,
-cultura y actividades del destino.
+Página web informativa donde presento información sobre Bali,
+sus lugares, cultura y actividades.
+</p>
+
+<a href="#">
+<button>Ver proyecto</button>
+</a>
+
+</div>
+
+<div class="proyecto">
+
+<h3>Proyecto personal</h3>
+
+<p>
+Proyecto personal desarrollado para practicar desarrollo web
+y mejorar mis habilidades de programación.
 </p>
 
 <a href="#">
@@ -267,12 +316,66 @@ cultura y actividades del destino.
 
 </section>
 
+<section id="contacto">
+
+<div class="card">
+
+<h2>Contacto / Encargos</h2>
+
+<p>
+Si quieres contactar conmigo o proponer un proyecto,
+puedes enviarme un mensaje aquí.
+</p>
+
+<form id="formulario">
+
+<input type="text" id="nombre" placeholder="Tu nombre" required>
+
+<input type="text" id="telefono" placeholder="Tu teléfono">
+
+<input type="text" id="producto" placeholder="Mensaje o proyecto">
+
+<textarea id="comentarios" placeholder="Explícame tu idea"></textarea>
+
+<button type="submit">Enviar mensaje</button>
+
+</form>
+
+</div>
+
+</section>
+
 <footer>
 
 <p>© 2026 Borja Agüera</p>
-<p>Portfolio personal · Desarrollo web</p>
+<p>Portfolio personal</p>
 
 </footer>
+
+<script>
+
+document.getElementById("formulario").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let nombre=document.getElementById("nombre").value;
+let telefono=document.getElementById("telefono").value;
+let producto=document.getElementById("producto").value;
+let comentarios=document.getElementById("comentarios").value;
+
+let mensaje="Hola, quiero contactar contigo:%0A"+
+"Nombre: "+nombre+"%0A"+
+"Teléfono: "+telefono+"%0A"+
+"Proyecto: "+producto+"%0A"+
+"Mensaje: "+comentarios;
+
+let numero="34600000000";
+
+window.open("https://wa.me/"+numero+"?text="+mensaje);
+
+});
+
+</script>
 
 </body>
 </html>
