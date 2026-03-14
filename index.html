@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,92 +8,133 @@
 
 <style>
 
+/* ESTILO GENERAL */
+
 body{
-font-family: system-ui;
+font-family:system-ui;
 margin:0;
-background:#f5f5f5;
-color:#333;
-}
-
-header{
-text-align:center;
-padding:60px 20px;
-background:white;
-border-bottom:1px solid #ddd;
-}
-
-nav{
-text-align:center;
-padding:15px;
-background:white;
-border-bottom:1px solid #eee;
-}
-
-nav a{
-margin:0 15px;
-text-decoration:none;
-color:#333;
-font-weight:600;
-}
-
-nav a:hover{
-color:#0077ff;
+background:linear-gradient(135deg,#1f1c2c,#928dab);
+color:white;
+scroll-behavior:smooth;
 }
 
 section{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-padding:40px 20px;
+padding:80px 20px;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-border:1px solid #eee;
-margin-bottom:25px;
+h1,h2,h3{
+margin-top:0;
 }
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(120deg,#00c6ff,#0072ff);
+}
+
+header h1{
+font-size:60px;
+letter-spacing:2px;
+}
+
+header p{
+font-size:20px;
+opacity:0.9;
+}
+
+/* NAV */
+
+nav{
+position:sticky;
+top:0;
+background:#111;
+text-align:center;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+/* CARDS */
+
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+border-radius:15px;
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TECNOLOGIAS */
+
+.tech{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.tech span{
+background:#00e5ff;
+color:#111;
+padding:8px 16px;
+border-radius:20px;
+font-weight:bold;
+}
+
+/* PROYECTOS */
 
 .proyectos{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
 }
 
 .proyecto{
-background:white;
-padding:20px;
-border-radius:10px;
-border:1px solid #eee;
+background:rgba(255,255,255,0.1);
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.2);
 }
 
-button{
-background:#0077ff;
-color:white;
+.proyecto:hover{
+transform:translateY(-8px) scale(1.02);
+background:rgba(255,255,255,0.2);
+}
+
+.proyecto button{
+margin-top:10px;
+background:#00e5ff;
 border:none;
 padding:10px 18px;
-border-radius:6px;
+border-radius:8px;
 cursor:pointer;
+font-weight:bold;
 }
 
-button:hover{
-background:#005bd1;
-}
-
-input, textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-border-radius:6px;
-border:1px solid #ccc;
-}
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:30px;
-margin-top:40px;
-background:white;
-border-top:1px solid #eee;
+padding:40px;
+background:#111;
+margin-top:80px;
 }
 
 </style>
@@ -106,9 +148,8 @@ border-top:1px solid #eee;
 <h1>Borja Agüera</h1>
 
 <p>
-Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).  
-Me gusta desarrollar páginas web, aplicaciones y proyectos personales
-para mejorar mis habilidades como programador.
+Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)  
+Apasionado por el desarrollo web, la programación y la creación de proyectos propios.
 </p>
 
 </header>
@@ -116,10 +157,8 @@ para mejorar mis habilidades como programador.
 <nav>
 
 <a href="#sobre">Sobre mí</a>
-<a href="#tecnologias">Tecnologías</a>
+<a href="#tecnologia">Tecnologías</a>
 <a href="#proyectos">Proyectos</a>
-<a href="#encargo">Encargos</a>
-<a href="#contacto">Contacto</a>
 
 </nav>
 
@@ -130,39 +169,73 @@ para mejorar mis habilidades como programador.
 <h2>Sobre mí</h2>
 
 <p>
-Soy estudiante de Desarrollo de Aplicaciones Multiplataforma y me interesa el
-desarrollo web y la programación. En mi tiempo libre desarrollo proyectos
-personales para seguir aprendiendo y mejorar mis habilidades.
+Hola, soy <b>Borja Agüera</b>, estudiante de Desarrollo de Aplicaciones Multiplataforma.
+Me interesa especialmente el desarrollo de aplicaciones, el desarrollo web y la creación
+de proyectos personales que me permitan seguir aprendiendo y mejorar mis habilidades.
 </p>
 
 <p>
-Estoy abierto a colaborar en pequeños proyectos o desarrollar páginas web
-sencillas para personas, negocios o ideas personales.
+Actualmente desarrollo proyectos tanto por estudios como por interés personal.
+Me gusta crear herramientas útiles, páginas web y pequeñas aplicaciones que resuelvan
+problemas reales.
+</p>
+
+<p>
+También estoy abierto a colaborar en pequeños proyectos o ayudar a crear páginas web
+para personas o negocios que necesiten presencia online.
 </p>
 
 </div>
 
 </section>
 
-<section id="tecnologias">
+<section id="tecnologia">
 
 <div class="card">
 
 <h2>Tecnologías</h2>
 
-<ul>
+<p>
+Trabajo principalmente con tecnologías de desarrollo web y programación,
+además de bases de datos para gestionar información en aplicaciones.
+</p>
 
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>Java</li>
-<li>SQL / Bases de datos</li>
+<div class="tech">
 
-</ul>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Java</span>
+<span>SQL</span>
+
+</div>
+
+<h3>Desarrollo Web</h3>
 
 <p>
-También puedo conectar páginas web o aplicaciones con bases de datos para
-gestionar información y crear aplicaciones más completas.
+Utilizo <b>HTML</b> para estructurar páginas web, creando contenidos claros y bien organizados.
+Con <b>CSS</b> diseño interfaces visuales modernas, adaptadas a diferentes dispositivos
+y centradas en la experiencia del usuario.
+</p>
+
+<p>
+También utilizo <b>JavaScript</b> para añadir interacción a las páginas web,
+crear formularios dinámicos y mejorar la funcionalidad de las aplicaciones web.
+</p>
+
+<h3>Programación</h3>
+
+<p>
+Trabajo con <b>Java</b> para desarrollar aplicaciones, practicar programación orientada a objetos
+y crear lógica de negocio dentro de los proyectos.
+</p>
+
+<h3>Bases de datos</h3>
+
+<p>
+Utilizo <b>SQL</b> para trabajar con bases de datos, almacenar información y gestionar datos
+dentro de aplicaciones. También puedo conectar aplicaciones o páginas web con bases de datos
+para crear sistemas más completos.
 </p>
 
 </div>
@@ -180,8 +253,8 @@ gestionar información y crear aplicaciones más completas.
 <h3>Web de Bali</h3>
 
 <p>
-Página web informativa sobre Bali con información sobre lugares,
-actividades y cultura.
+Página web informativa sobre Bali donde presento información sobre lugares,
+cultura y actividades del destino.
 </p>
 
 <a href="#">
@@ -190,75 +263,6 @@ actividades y cultura.
 
 </div>
 
-<div class="proyecto">
-
-<h3>Web de Encargos</h3>
-
-<p>
-Aplicación web que permite enviar encargos mediante un formulario
-conectado a WhatsApp.
-</p>
-
-<a href="https://borjaguera.github.io/encargos">
-<button>Ver proyecto</button>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="encargo">
-
-<div class="card">
-
-<h2>Hacer un encargo</h2>
-
-<p>
-Si necesitas ayuda con una página web o tienes un proyecto,
-puedes enviarme un encargo aquí.
-</p>
-
-<form id="formulario">
-
-<input type="text" id="nombre" placeholder="Tu nombre" required>
-
-<input type="text" id="telefono" placeholder="Tu teléfono" required>
-
-<input type="text" id="producto" placeholder="¿Qué necesitas?" required>
-
-<textarea id="comentarios" placeholder="Explícame tu idea"></textarea>
-
-<button type="submit">Enviar por WhatsApp</button>
-
-</form>
-
-</div>
-
-</section>
-
-<section id="contacto">
-
-<div class="card">
-
-<h2>Contacto</h2>
-
-<p>Email: tuemail@gmail.com</p>
-
-<p>
-GitHub:
-<a href="https://github.com/borjaguera">
-github.com/borjaguera
-</a>
-</p>
-
-<p>
-<a href="https://wa.me/34600000000">
-Contactar por WhatsApp
-</a>
-</p>
-
 </div>
 
 </section>
@@ -266,37 +270,9 @@ Contactar por WhatsApp
 <footer>
 
 <p>© 2026 Borja Agüera</p>
-
-<p>
-Portfolio personal · Desarrollo web
-</p>
+<p>Portfolio personal · Desarrollo web</p>
 
 </footer>
-
-<script>
-
-document.getElementById("formulario").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-let nombre=document.getElementById("nombre").value;
-let telefono=document.getElementById("telefono").value;
-let producto=document.getElementById("producto").value;
-let comentarios=document.getElementById("comentarios").value;
-
-let mensaje="Nuevo encargo:%0A"+
-"Nombre: "+nombre+"%0A"+
-"Teléfono: "+telefono+"%0A"+
-"Proyecto: "+producto+"%0A"+
-"Comentarios: "+comentarios;
-
-let numero="34600000000";
-
-window.open("https://wa.me/"+numero+"?text="+mensaje);
-
-});
-
-</script>
 
 </body>
 </html>
