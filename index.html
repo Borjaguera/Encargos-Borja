@@ -3,45 +3,56 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Encargos Borja</title>
+<title>Borja Guera - Portfolio</title>
 
 <style>
 
 body{
 font-family: Arial;
-background:#f5f5f5;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#222;
+color:white;
+padding:20px;
 text-align:center;
+}
+
+nav{
+background:#333;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
 padding:40px;
-}
-
-h1{
-color:#333;
-}
-
-form{
-background:white;
-padding:30px;
-border-radius:10px;
-width:300px;
+max-width:900px;
 margin:auto;
+}
+
+.proyecto{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-input, textarea{
-width:90%;
-padding:10px;
-margin:8px;
-}
-
-button{
-background:#25D366;
+footer{
+background:#222;
 color:white;
-border:none;
-padding:12px;
-width:95%;
-font-size:16px;
-border-radius:5px;
-cursor:pointer;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 
 </style>
@@ -50,50 +61,87 @@ cursor:pointer;
 
 <body>
 
-<h1>Haz tu encargo 📦</h1>
+<header>
+<h1>Borja Guera</h1>
+<p>Estudiante de Desarrollo de Aplicaciones Multiplataforma</p>
+</header>
 
-<form id="formulario">
+<nav>
+<a href="#sobre">Sobre mí</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#encargos">Encargos</a>
+<a href="#contacto">Contacto</a>
+</nav>
 
-<input type="text" id="nombre" placeholder="Tu nombre" required>
+<section id="sobre">
 
-<input type="text" id="telefono" placeholder="Tu teléfono" required>
+<h2>Sobre mí</h2>
 
-<input type="text" id="producto" placeholder="¿Qué quieres encargar?" required>
+<p>
+Hola, soy Borja. Actualmente estudio Desarrollo de Aplicaciones Multiplataforma.
+Me interesa el desarrollo de software, las aplicaciones web y crear proyectos
+que resuelvan problemas reales.
+</p>
 
-<input type="number" id="cantidad" placeholder="Cantidad">
+</section>
 
-<textarea id="comentarios" placeholder="Comentarios"></textarea>
+<section id="proyectos">
 
-<button type="submit">Enviar encargo</button>
+<h2>Mis proyectos</h2>
+
+<div class="proyecto">
+<h3>Web de encargos</h3>
+<p>
+Una aplicación web que permite a los usuarios hacer encargos rellenando
+un formulario y enviarlo directamente por WhatsApp.
+</p>
+</div>
+
+<div class="proyecto">
+<h3>Proyecto DAM</h3>
+<p>
+Diferentes prácticas y proyectos desarrollados durante el ciclo
+de Desarrollo de Aplicaciones Multiplataforma.
+</p>
+</div>
+
+</section>
+
+<section id="encargos">
+
+<h2>Haz un encargo</h2>
+
+<form>
+
+<input type="text" placeholder="Tu nombre"><br><br>
+
+<input type="text" placeholder="Tu teléfono"><br><br>
+
+<input type="text" placeholder="¿Qué quieres encargar?"><br><br>
+
+<textarea placeholder="Comentarios"></textarea><br><br>
+
+<button>Enviar</button>
 
 </form>
 
-<script>
+</section>
 
-document.getElementById("formulario").addEventListener("submit", function(e){
+<section id="contacto">
 
-e.preventDefault();
+<h2>Contacto</h2>
 
-let nombre = document.getElementById("nombre").value;
-let telefono = document.getElementById("telefono").value;
-let producto = document.getElementById("producto").value;
-let cantidad = document.getElementById("cantidad").value;
-let comentarios = document.getElementById("comentarios").value;
+<p>Email: borja@email.com</p>
 
-let mensaje = "Nuevo encargo:%0A"
-+ "Nombre: " + nombre + "%0A"
-+ "Teléfono: " + telefono + "%0A"
-+ "Producto: " + producto + "%0A"
-+ "Cantidad: " + cantidad + "%0A"
-+ "Comentarios: " + comentarios;
+<p>GitHub: github.com/borjaguera</p>
 
-let numero = "34697819202";
+</section>
 
-window.open("https://wa.me/" + numero + "?text=" + mensaje);
+<footer>
 
-});
+<p>© 2026 Borja Guera</p>
 
-</script>
+</footer>
 
 </body>
 </html>
