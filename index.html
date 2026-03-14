@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -9,65 +8,49 @@
 <style>
 
 body{
-font-family: Arial;
+font-family: system-ui;
 margin:0;
-background: linear-gradient(135deg,#4facfe,#00f2fe);
+background:#f5f5f5;
 color:#333;
 }
 
 header{
 text-align:center;
-padding:50px;
-color:white;
+padding:60px 20px;
+background:white;
+border-bottom:1px solid #ddd;
 }
 
 nav{
-background:#222;
-padding:15px;
 text-align:center;
+padding:15px;
+background:white;
+border-bottom:1px solid #eee;
 }
 
 nav a{
-color:white;
-margin:15px;
+margin:0 15px;
 text-decoration:none;
-font-size:18px;
-font-weight:bold;
-transition:0.3s;
+color:#333;
+font-weight:600;
 }
 
 nav a:hover{
-color:#00f2fe;
+color:#0077ff;
 }
 
 section{
-padding:40px;
-max-width:1000px;
+max-width:900px;
 margin:auto;
+padding:40px 20px;
 }
 
 .card{
 background:white;
 padding:25px;
-margin:25px 0;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
-}
-
-button{
-background:#4facfe;
-color:white;
-border:none;
-padding:12px 20px;
 border-radius:10px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:#008cff;
-transform:scale(1.05);
+border:1px solid #eee;
+margin-bottom:25px;
 }
 
 .proyectos{
@@ -79,23 +62,37 @@ gap:20px;
 .proyecto{
 background:white;
 padding:20px;
-border-radius:15px;
-box-shadow:0 8px 15px rgba(0,0,0,0.15);
+border-radius:10px;
+border:1px solid #eee;
 }
 
-input,textarea{
-width:90%;
+button{
+background:#0077ff;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#005bd1;
+}
+
+input, textarea{
+width:100%;
 padding:10px;
-margin:10px;
-border-radius:8px;
+margin:10px 0;
+border-radius:6px;
 border:1px solid #ccc;
 }
 
 footer{
-background:#111;
-color:white;
-padding:40px;
-margin-top:50px;
+text-align:center;
+padding:30px;
+margin-top:40px;
+background:white;
+border-top:1px solid #eee;
 }
 
 </style>
@@ -109,8 +106,9 @@ margin-top:50px;
 <h1>Borja Agüera</h1>
 
 <p>
-Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)  
-Apasionado por la tecnología, el desarrollo web y la creación de proyectos propios.
+Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).  
+Me gusta desarrollar páginas web, aplicaciones y proyectos personales
+para mejorar mis habilidades como programador.
 </p>
 
 </header>
@@ -118,9 +116,9 @@ Apasionado por la tecnología, el desarrollo web y la creación de proyectos pro
 <nav>
 
 <a href="#sobre">Sobre mí</a>
-<a href="#habilidades">Tecnologías</a>
+<a href="#tecnologias">Tecnologías</a>
 <a href="#proyectos">Proyectos</a>
-<a href="#encargos">Encargos</a>
+<a href="#encargo">Encargos</a>
 <a href="#contacto">Contacto</a>
 
 </nav>
@@ -132,70 +130,39 @@ Apasionado por la tecnología, el desarrollo web y la creación de proyectos pro
 <h2>Sobre mí</h2>
 
 <p>
-Hola, soy <b>Borja Agüera</b>, estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)
-y apasionado por la tecnología y el desarrollo de software.
+Soy estudiante de Desarrollo de Aplicaciones Multiplataforma y me interesa el
+desarrollo web y la programación. En mi tiempo libre desarrollo proyectos
+personales para seguir aprendiendo y mejorar mis habilidades.
 </p>
 
 <p>
-Actualmente estoy aprendiendo y desarrollando proyectos tanto en mis estudios
-como por iniciativa personal. Me gusta crear herramientas útiles,
-páginas web y pequeñas aplicaciones que ayuden a resolver problemas reales.
-</p>
-
-<p>
-En esta web puedes ver algunos de los proyectos que he realizado durante mi formación
-y otros que he desarrollado por interés personal para seguir mejorando mis habilidades.
-</p>
-
-<p>
-También estoy abierto a colaborar en pequeños proyectos o desarrollar páginas web
-sencillas para personas, negocios o proyectos personales.
-</p>
-
-<p>
-Intento ofrecer soluciones sencillas y accesibles, adaptándome a cada proyecto
-y a las necesidades de cada persona.
+Estoy abierto a colaborar en pequeños proyectos o desarrollar páginas web
+sencillas para personas, negocios o ideas personales.
 </p>
 
 </div>
 
 </section>
 
-<section id="habilidades">
+<section id="tecnologias">
 
 <div class="card">
 
-<h2>Tecnologías y lo que ofrezco</h2>
-
-<p>
-Actualmente estoy desarrollando mis habilidades como programador mientras estudio
-Desarrollo de Aplicaciones Multiplataforma (DAM).
-</p>
-
-<h3>Tecnologías que utilizo</h3>
+<h2>Tecnologías</h2>
 
 <ul>
-<li><b>HTML</b> – estructura de páginas web</li>
-<li><b>CSS</b> – diseño visual y estilos</li>
-<li><b>JavaScript</b> – interacción en páginas web</li>
-<li><b>Java</b> – lógica de programación y aplicaciones</li>
-<li><b>SQL</b> – bases de datos</li>
-</ul>
 
-<h3>Qué puedo hacer</h3>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Java</li>
+<li>SQL / Bases de datos</li>
 
-<ul>
-<li>Crear páginas web informativas o personales</li>
-<li>Desarrollar páginas para pequeños proyectos o negocios</li>
-<li>Crear formularios de contacto o encargos</li>
-<li>Conectar páginas web o aplicaciones con bases de datos</li>
-<li>Diseñar páginas web claras y funcionales</li>
-<li>Modificar o mejorar páginas web existentes</li>
 </ul>
 
 <p>
-También tengo experiencia trabajando con bases de datos y vinculándolas
-a aplicaciones para gestionar información.
+También puedo conectar páginas web o aplicaciones con bases de datos para
+gestionar información y crear aplicaciones más completas.
 </p>
 
 </div>
@@ -204,17 +171,32 @@ a aplicaciones para gestionar información.
 
 <section id="proyectos">
 
-<h2>Mis proyectos</h2>
+<h2>Proyectos</h2>
 
 <div class="proyectos">
+
+<div class="proyecto">
+
+<h3>Web de Bali</h3>
+
+<p>
+Página web informativa sobre Bali con información sobre lugares,
+actividades y cultura.
+</p>
+
+<a href="#">
+<button>Ver proyecto</button>
+</a>
+
+</div>
 
 <div class="proyecto">
 
 <h3>Web de Encargos</h3>
 
 <p>
-Aplicación web que permite a los usuarios realizar encargos mediante un formulario
-que se envía directamente por WhatsApp.
+Aplicación web que permite enviar encargos mediante un formulario
+conectado a WhatsApp.
 </p>
 
 <a href="https://borjaguera.github.io/encargos">
@@ -223,34 +205,19 @@ que se envía directamente por WhatsApp.
 
 </div>
 
-<div class="proyecto">
-
-<h3>Proyectos de DAM</h3>
-
-<p>
-Proyectos desarrollados durante el ciclo formativo de Desarrollo de Aplicaciones
-Multiplataforma, incluyendo programación en Java y bases de datos.
-</p>
-
-<a href="https://github.com/borjaguera">
-<button>Ver GitHub</button>
-</a>
-
-</div>
-
 </div>
 
 </section>
 
-<section id="encargos">
+<section id="encargo">
 
 <div class="card">
 
-<h2>Haz un encargo</h2>
+<h2>Hacer un encargo</h2>
 
 <p>
-Si tienes una idea o necesitas ayuda con una página web
-o proyecto digital puedes enviarme los detalles aquí.
+Si necesitas ayuda con una página web o tienes un proyecto,
+puedes enviarme un encargo aquí.
 </p>
 
 <form id="formulario">
@@ -263,7 +230,7 @@ o proyecto digital puedes enviarme los detalles aquí.
 
 <textarea id="comentarios" placeholder="Explícame tu idea"></textarea>
 
-<button type="submit">Enviar encargo por WhatsApp</button>
+<button type="submit">Enviar por WhatsApp</button>
 
 </form>
 
@@ -277,19 +244,18 @@ o proyecto digital puedes enviarme los detalles aquí.
 
 <h2>Contacto</h2>
 
-<p><b>Email:</b> tuemail@gmail.com</p>
+<p>Email: tuemail@gmail.com</p>
 
 <p>
-<b>GitHub:</b>
+GitHub:
 <a href="https://github.com/borjaguera">
 github.com/borjaguera
 </a>
 </p>
 
 <p>
-<b>WhatsApp:</b>
 <a href="https://wa.me/34600000000">
-Enviar mensaje
+Contactar por WhatsApp
 </a>
 </p>
 
@@ -299,46 +265,10 @@ Enviar mensaje
 
 <footer>
 
-<div style="max-width:1000px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;">
-
-<div>
-<h3>Borja Agüera</h3>
-<p>Estudiante de Desarrollo de Aplicaciones Multiplataforma</p>
-<p>Desarrollo web · Proyectos personales · Aprendizaje continuo</p>
-</div>
-
-<div>
-<h3>Enlaces</h3>
-<p><a href="#sobre" style="color:white;">Sobre mí</a></p>
-<p><a href="#habilidades" style="color:white;">Tecnologías</a></p>
-<p><a href="#proyectos" style="color:white;">Proyectos</a></p>
-<p><a href="#encargos" style="color:white;">Encargos</a></p>
-</div>
-
-<div>
-<h3>Contacto</h3>
-<p>Email: borjaguera@gmail.com</p>
+<p>© 2026 Borja Agüera</p>
 
 <p>
-<a href="https://github.com/borjaguera" style="color:white;">
-GitHub
-</a>
-</p>
-
-<p>
-<a href="https://wa.me/34600000000" style="color:white;">
-WhatsApp
-</a>
-</p>
-
-</div>
-
-</div>
-
-<hr style="margin-top:30px;border:0;border-top:1px solid #444;">
-
-<p style="text-align:center;margin-top:20px;">
-© 2026 Borja Agüera · Portfolio personal
+Portfolio personal · Desarrollo web
 </p>
 
 </footer>
@@ -349,18 +279,18 @@ document.getElementById("formulario").addEventListener("submit",function(e){
 
 e.preventDefault();
 
-let nombre = document.getElementById("nombre").value;
-let telefono = document.getElementById("telefono").value;
-let producto = document.getElementById("producto").value;
-let comentarios = document.getElementById("comentarios").value;
+let nombre=document.getElementById("nombre").value;
+let telefono=document.getElementById("telefono").value;
+let producto=document.getElementById("producto").value;
+let comentarios=document.getElementById("comentarios").value;
 
-let mensaje = "Nuevo encargo:%0A"
-+"Nombre: "+nombre+"%0A"
-+"Telefono: "+telefono+"%0A"
-+"Encargo: "+producto+"%0A"
-+"Comentarios: "+comentarios;
+let mensaje="Nuevo encargo:%0A"+
+"Nombre: "+nombre+"%0A"+
+"Teléfono: "+telefono+"%0A"+
+"Proyecto: "+producto+"%0A"+
+"Comentarios: "+comentarios;
 
-let numero = "34697819202";
+let numero="34600000000";
 
 window.open("https://wa.me/"+numero+"?text="+mensaje);
 
