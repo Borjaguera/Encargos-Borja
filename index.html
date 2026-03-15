@@ -280,8 +280,6 @@ con bases de datos para crear sistemas más completos.
 
 <section id="proyectos">
 
-
-
 <div class="proyectos">
 
 <div class="proyecto">
@@ -293,7 +291,7 @@ con bases de datos para crear sistemas más completos.
 <p>
 Página web informativa donde presento información sobre distintos destinos, 
 en este caso Bali. Incluye detalles sobre lugares de interés, actividades, cultura y recomendaciones.
- Está diseñada de forma interactiva con el objetivo de servir como guía para los usuarios que quieran conocer mejor el destino
+Está diseñada de forma interactiva con el objetivo de servir como guía para los usuarios que quieran conocer mejor el destino
 </p>
 
 <a href="https://borjaguera.github.io/viaje/" target="_blank">
@@ -302,14 +300,12 @@ en este caso Bali. Incluye detalles sobre lugares de interés, actividades, cult
 
 <p>
 Proyecto personal desarrollado para practicar desarrollo web, en esta página simulo la página web de un hospital.
-.
 </p>
 
 <a href="https://borjaguera.github.io/hospital-roquetasdemar/" target="_blank">
 <button>Ver proyecto</button>
 </a>
 
-  
 </div>
 
 </div>
@@ -350,6 +346,8 @@ puedes enviarme un mensaje aquí.
 <p>© 2026 Borja Agüera</p>
 <p>Portfolio personal</p>
 
+<p>👀 Visitas al portfolio: <span id="contadorVisitas">0</span></p>
+
 </footer>
 
 <script>
@@ -373,6 +371,13 @@ let numero="34697819202";
 
 window.open("https://wa.me/"+numero+"?text="+mensaje);
 
+});
+
+
+fetch("https://api.countapi.xyz/hit/borjaguera/portfolio")
+.then(response => response.json())
+.then(data => {
+document.getElementById("contadorVisitas").innerText = data.value;
 });
 
 </script>
