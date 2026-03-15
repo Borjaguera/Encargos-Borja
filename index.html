@@ -383,7 +383,7 @@ la página web de un hospital.
 <p>© 2026 Borja Agüera</p>
 <p>Portfolio personal</p>
 
-<p>👀 Visitas al portfolio: <span id="contadorVisitas">0</span></p>
+<p>👀 Visitas al portfolio: <span id="busuanzi_value_site_pv">0</span></p>
 
 </footer>
 
@@ -412,29 +412,9 @@ window.open("https://wa.me/"+numero+"?text="+mensaje);
 
 });
 
-/* CONTADOR (SOLUCIÓN DEFINITIVA) */
-
-async function contador(){
-
-try{
-
-const res = await fetch("https://api.countapi.xyz/hit/borjaaguera-visitas/portfolio?cache="+Math.random());
-
-const data = await res.json();
-
-document.getElementById("contadorVisitas").innerText = data.value;
-
-}catch{
-
-document.getElementById("contadorVisitas").innerText="0";
-
-}
-
-}
-
-contador();
-
 </script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
 </html>
