@@ -412,16 +412,27 @@ window.open("https://wa.me/"+numero+"?text="+mensaje);
 
 });
 
-/* CONTADOR CORREGIDO */
+/* CONTADOR (SOLUCIÓN DEFINITIVA) */
 
-fetch("https://api.countapi.xyz/hit/borjaaguera-visitas/portfolio?"+Date.now())
-.then(response => response.json())
-.then(data => {
+async function contador(){
+
+try{
+
+const res = await fetch("https://api.countapi.xyz/hit/borjaaguera-visitas/portfolio?cache="+Math.random());
+
+const data = await res.json();
+
 document.getElementById("contadorVisitas").innerText = data.value;
-})
-.catch(()=>{
-document.getElementById("contadorVisitas").innerText="1";
-});
+
+}catch{
+
+document.getElementById("contadorVisitas").innerText="0";
+
+}
+
+}
+
+contador();
 
 </script>
 
