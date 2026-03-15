@@ -374,10 +374,14 @@ window.open("https://wa.me/"+numero+"?text="+mensaje);
 });
 
 
-fetch("https://api.countapi.xyz/hit/borjaguera/portfolio")
-.then(response => response.json())
-.then(data => {
-document.getElementById("contadorVisitas").innerText = data.value;
+window.addEventListener("load",function(){
+
+fetch("https://api.countapi.xyz/hit/borjaaguera/portfolio")
+.then(res=>res.json())
+.then(res=>{
+document.getElementById("contadorVisitas").textContent=res.value;
+});
+
 });
 
 </script>
