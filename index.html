@@ -248,32 +248,6 @@ además de bases de datos para gestionar información dentro de aplicaciones.
 
 </div>
 
-<h3>Desarrollo Web</h3>
-
-<p>
-Utilizo HTML para estructurar páginas web y CSS para diseñar interfaces modernas
-adaptadas a diferentes dispositivos.
-</p>
-
-<p>
-Con JavaScript añado interacción a las páginas web y funcionalidades dinámicas.
-</p>
-
-<h3>Programación</h3>
-
-<p>
-Trabajo con Java para desarrollar aplicaciones y practicar programación orientada
-a objetos.
-</p>
-
-<h3>Bases de datos</h3>
-
-<p>
-Utilizo SQL para trabajar con bases de datos, almacenar información y gestionar
-datos dentro de aplicaciones. También puedo conectar aplicaciones o páginas web
-con bases de datos para crear sistemas más completos.
-</p>
-
 </div>
 
 </section>
@@ -290,8 +264,7 @@ con bases de datos para crear sistemas más completos.
 
 <p>
 Página web informativa donde presento información sobre distintos destinos, 
-en este caso Bali. Incluye detalles sobre lugares de interés, actividades, cultura y recomendaciones.
-Está diseñada de forma interactiva con el objetivo de servir como guía para los usuarios que quieran conocer mejor el destino
+en este caso Bali.
 </p>
 
 <a href="https://borjaguera.github.io/viaje/" target="_blank">
@@ -299,7 +272,8 @@ Está diseñada de forma interactiva con el objetivo de servir como guía para l
 </a>
 
 <p>
-Proyecto personal desarrollado para practicar desarrollo web, en esta página simulo la página web de un hospital.
+Proyecto personal desarrollado para practicar desarrollo web simulando
+la página web de un hospital.
 </p>
 
 <a href="https://borjaguera.github.io/hospital-roquetasdemar/" target="_blank">
@@ -374,14 +348,12 @@ window.open("https://wa.me/"+numero+"?text="+mensaje);
 });
 
 
-window.addEventListener("load",function(){
+/* CONTADOR DE VISITAS */
 
 fetch("https://api.countapi.xyz/hit/borjaaguera/portfolio")
-.then(res=>res.json())
-.then(res=>{
-document.getElementById("contadorVisitas").textContent=res.value;
-});
-
+.then(response => response.json())
+.then(data => {
+document.getElementById("contadorVisitas").innerText = data.value;
 });
 
 </script>
