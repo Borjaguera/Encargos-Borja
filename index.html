@@ -146,6 +146,19 @@ cursor:pointer;
 font-weight:bold;
 }
 
+/* FORMULARIOS LADO A LADO */
+
+.formularios-contacto{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.formulario-box{
+flex:1;
+min-width:300px;
+}
+
 /* FORMULARIO */
 
 input,textarea{
@@ -260,7 +273,7 @@ además de bases de datos para gestionar información dentro de aplicaciones.
 
 <h2>Proyectos</h2>
 
-<h3>Proyectos web.</h3>
+<h3>Proyectos web</h3>
 
 <p>
 Página web informativa donde presento información sobre distintos destinos, 
@@ -297,6 +310,13 @@ Si quieres contactar conmigo o proponer un proyecto,
 puedes enviarme un mensaje aquí.
 </p>
 
+<div class="formularios-contacto">
+
+<div class="formulario-box">
+
+<h3>Enviar por WhatsApp</h3>
+<p>📱 697819202</p>
+
 <form id="formulario">
 
 <input type="text" id="nombre" placeholder="Tu nombre" required>
@@ -307,9 +327,34 @@ puedes enviarme un mensaje aquí.
 
 <textarea id="comentarios" placeholder="Explícame tu idea"></textarea>
 
-<button type="submit">Enviar mensaje</button>
+<button type="submit">Enviar por WhatsApp</button>
 
 </form>
+
+</div>
+
+<div class="formulario-box">
+
+<h3>Enviar por Email</h3>
+<p>✉️ borjaguera@gmail.com</p>
+
+<form action="mailto:borjaguera@gmail.com" method="post" enctype="text/plain">
+
+<input type="text" name="Nombre" placeholder="Tu nombre" required>
+
+<input type="text" name="Telefono" placeholder="Tu teléfono">
+
+<input type="text" name="Proyecto" placeholder="Mensaje o proyecto">
+
+<textarea name="Mensaje" placeholder="Explícame tu idea"></textarea>
+
+<button type="submit">Enviar por Email</button>
+
+</form>
+
+</div>
+
+</div>
 
 </div>
 
@@ -347,8 +392,7 @@ window.open("https://wa.me/"+numero+"?text="+mensaje);
 
 });
 
-
-/* CONTADOR DE VISITAS */
+/* CONTADOR */
 
 fetch("https://api.countapi.xyz/hit/borjaaguera/portfolio")
 .then(response => response.json())
