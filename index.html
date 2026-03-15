@@ -17,8 +17,6 @@ color:white;
 scroll-behavior:smooth;
 }
 
-/* REDUCE EL HUECO ENTRE SECCIONES */
-
 section{
 max-width:1100px;
 margin:auto;
@@ -146,7 +144,7 @@ cursor:pointer;
 font-weight:bold;
 }
 
-/* FORMULARIOS LADO A LADO */
+/* FORMULARIOS */
 
 .formularios-contacto{
 display:flex;
@@ -158,8 +156,6 @@ flex-wrap:wrap;
 flex:1;
 min-width:300px;
 }
-
-/* FORMULARIO */
 
 input,textarea{
 width:100%;
@@ -222,18 +218,12 @@ Interesado en desarrollo web, programación y proyectos personales.
 
 <p>
 Hola, soy <b>Borja Agüera</b>, estudiante de Desarrollo de Aplicaciones Multiplataforma.
-Me interesa especialmente el desarrollo de aplicaciones, el desarrollo web y la
-creación de proyectos que me permitan seguir aprendiendo.
+Me interesa especialmente el desarrollo web y la creación de proyectos prácticos.
 </p>
 
 <p>
 Actualmente desarrollo proyectos tanto por estudios como por iniciativa personal.
-También estoy abierto a colaborar en pequeños proyectos o ayudar a crear páginas web
-para personas o negocios.
-</p>
-
-<p>
-Intento crear soluciones claras, funcionales y accesibles adaptadas a cada proyecto.
+También estoy abierto a colaborar en pequeños proyectos o ayudar a crear páginas web.
 </p>
 
 </div>
@@ -245,11 +235,6 @@ Intento crear soluciones claras, funcionales y accesibles adaptadas a cada proye
 <div class="card">
 
 <h2>Tecnologías</h2>
-
-<p>
-Trabajo principalmente con tecnologías de desarrollo web y programación,
-además de bases de datos para gestionar información dentro de aplicaciones.
-</p>
 
 <div class="tech">
 
@@ -276,8 +261,7 @@ además de bases de datos para gestionar información dentro de aplicaciones.
 <h3>Proyectos web</h3>
 
 <p>
-Página web informativa donde presento información sobre distintos destinos, 
-en este caso Bali.
+Página web informativa sobre Bali con información de lugares, actividades y guía interactiva.
 </p>
 
 <a href="https://borjaguera.github.io/viaje/" target="_blank">
@@ -285,8 +269,7 @@ en este caso Bali.
 </a>
 
 <p>
-Proyecto personal desarrollado para practicar desarrollo web simulando
-la página web de un hospital.
+Proyecto web simulando la página de un hospital para practicar diseño y estructura web.
 </p>
 
 <a href="https://borjaguera.github.io/hospital-roquetasdemar/" target="_blank">
@@ -305,12 +288,9 @@ la página web de un hospital.
 
 <h2>Contacto / Encargos</h2>
 
-<p>
-Si quieres contactar conmigo o proponer un proyecto,
-puedes enviarme un mensaje aquí.
-</p>
-
 <div class="formularios-contacto">
+
+<!-- WHATSAPP -->
 
 <div class="formulario-box">
 
@@ -321,17 +301,21 @@ puedes enviarme un mensaje aquí.
 
 <input type="text" id="nombre" placeholder="Tu nombre" required>
 
-<input type="text" id="telefono" placeholder="Tu teléfono">
+<input type="email" id="email" placeholder="Tu email (opcional)">
 
-<input type="text" id="producto" placeholder="Mensaje o proyecto">
+<input type="tel" id="telefono" placeholder="Tu teléfono (opcional)">
 
-<textarea id="comentarios" placeholder="Explícame tu idea"></textarea>
+<input type="text" id="producto" placeholder="Proyecto o idea" required>
+
+<textarea id="comentarios" placeholder="Explícame tu idea" required></textarea>
 
 <button type="submit">Enviar por WhatsApp</button>
 
 </form>
 
 </div>
+
+<!-- EMAIL -->
 
 <div class="formulario-box">
 
@@ -342,11 +326,13 @@ puedes enviarme un mensaje aquí.
 
 <input type="text" name="Nombre" placeholder="Tu nombre" required>
 
-<input type="text" name="Telefono" placeholder="Tu teléfono">
+<input type="email" name="Email" placeholder="Tu email (opcional)">
 
-<input type="text" name="Proyecto" placeholder="Mensaje o proyecto">
+<input type="tel" name="Telefono" placeholder="Tu teléfono (opcional)">
 
-<textarea name="Mensaje" placeholder="Explícame tu idea"></textarea>
+<input type="text" name="Proyecto" placeholder="Proyecto o idea" required>
+
+<textarea name="Mensaje" placeholder="Explícame tu idea" required></textarea>
 
 <button type="submit">Enviar por Email</button>
 
@@ -376,12 +362,14 @@ document.getElementById("formulario").addEventListener("submit",function(e){
 e.preventDefault();
 
 let nombre=document.getElementById("nombre").value;
+let email=document.getElementById("email").value;
 let telefono=document.getElementById("telefono").value;
 let producto=document.getElementById("producto").value;
 let comentarios=document.getElementById("comentarios").value;
 
 let mensaje="Hola, quiero contactar contigo:%0A"+
 "Nombre: "+nombre+"%0A"+
+"Email: "+email+"%0A"+
 "Teléfono: "+telefono+"%0A"+
 "Proyecto: "+producto+"%0A"+
 "Mensaje: "+comentarios;
