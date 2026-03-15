@@ -412,12 +412,15 @@ window.open("https://wa.me/"+numero+"?text="+mensaje);
 
 });
 
-/* CONTADOR */
+/* CONTADOR CORREGIDO */
 
-fetch("https://api.countapi.xyz/hit/borjaaguera/portfolio")
+fetch("https://api.countapi.xyz/hit/borjaaguera-visitas/portfolio?"+Date.now())
 .then(response => response.json())
 .then(data => {
 document.getElementById("contadorVisitas").innerText = data.value;
+})
+.catch(()=>{
+document.getElementById("contadorVisitas").innerText="1";
 });
 
 </script>
